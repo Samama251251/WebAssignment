@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterviewAI - Automated Tech Interview Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #14a800;
+            --secondary-green: #0e8f0d;
+            --light-green: #e4f7e3;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .bg-light-green {
+            background-color: var(--light-green);
+        }
+        
+        .text-primary-green {
+            color: var(--primary-green);
+        }
+        
+        .btn-primary-green {
+            background-color: var(--primary-green);
+            border-color: var(--primary-green);
+            color: white;
+        }
+        
+        .btn-primary-green:hover {
+            background-color: var(--secondary-green);
+            border-color: var(--secondary-green);
+            color: white;
+        }
+        
+        .btn-outline-green {
+            color: var(--primary-green);
+            border-color: var(--primary-green);
+        }
+        
+        .btn-outline-green:hover {
+            background-color: var(--light-green);
+            color: var(--primary-green);
+        }
+        
+        .step-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--light-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.75rem;
+            color: var(--primary-green);
+        }
+        
+        .feature-icon {
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+        
+        .avatar-circle {
+            width: 50px;
+            height: 50px;
+            background: var(--light-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+        
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 0.5rem;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary-green);
+            color: white;
+        }
+        
+        .navbar-brand span {
+            color: #222;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-2">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-3 text-primary-green" href="#">Interview<span>AI</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link fw-medium" href="#">How It Works</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link fw-medium" href="#">For Companies</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link fw-medium" href="#">For Candidates</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link fw-medium" href="#">Pricing</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <button class="btn btn-outline-green me-2">Log In</button>
+                        <button class="btn btn-primary-green">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-light-green py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h1 class="display-4 fw-bold mb-3">AI-Powered Tech Interviews.<br>No Human Bias.</h1>
+                    <p class="lead text-secondary mb-4">InterviewAI automates the entire tech interview process, saving time for companies and providing fair evaluations for candidates.</p>
+                    <div>
+                        <button class="btn btn-primary-green btn-lg me-2 mb-2">Hire Top Talent</button>
+                        <button class="btn btn-outline-green btn-lg mb-2">Find Your Next Role</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="/api/placeholder/500/350" alt="InterviewAI Platform" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">How InterviewAI Works</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 border-0 rounded-3 p-3 card-hover">
+                        <div class="card-body text-center">
+                            <div class="step-icon">1</div>
+                            <h5 class="card-title mb-3">Companies Post Jobs</h5>
+                            <p class="card-text text-secondary">Companies create detailed job listings with required skills and qualifications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 border-0 rounded-3 p-3 card-hover">
+                        <div class="card-body text-center">
+                            <div class="step-icon">2</div>
+                            <h5 class="card-title mb-3">Candidates Apply</h5>
+                            <p class="card-text text-secondary">Job seekers submit their applications and choose interview time slots.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 border-0 rounded-3 p-3 card-hover">
+                        <div class="card-body text-center">
+                            <div class="step-icon">3</div>
+                            <h5 class="card-title mb-3">AI Conducts Interviews</h5>
+                            <p class="card-text text-secondary">Our AI evaluates technical skills through coding challenges and behavioral questions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 border-0 rounded-3 p-3 card-hover">
+                        <div class="card-body text-center">
+                            <div class="step-icon">4</div>
+                            <h5 class="card-title mb-3">Match & Hire</h5>
+                            <p class="card-text text-secondary">Companies receive detailed reports and can make data-driven hiring decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Why Choose InterviewAI</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 border-0 rounded-3 p-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-clock feature-icon"></i>
+                                <h5 class="card-title mb-0">Save 80% of Hiring Time</h5>
+                            </div>
+                            <p class="card-text text-secondary">Automate screening and interviewing to focus only on the best-matched candidates.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 border-0 rounded-3 p-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-robot feature-icon"></i>
+                                <h5 class="card-title mb-0">Unbiased Evaluations</h5>
+                            </div>
+                            <p class="card-text text-secondary">Our AI evaluates candidates purely on merit, eliminating unconscious bias from the process.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 border-0 rounded-3 p-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-laptop feature-icon"></i>
+                                <h5 class="card-title mb-0">Real-world Coding Challenges</h5>
+                            </div>
+                            <p class="card-text text-secondary">Technical assessments that simulate actual work scenarios for relevant skill evaluation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 border-0 rounded-3 p-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-graph-up feature-icon"></i>
+                                <h5 class="card-title mb-0">Data-Driven Insights</h5>
+                            </div>
+                            <p class="card-text text-secondary">Detailed analytics and comparative data to make informed hiring decisions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 border-0 rounded-3 p-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-calendar-check feature-icon"></i>
+                                <h5 class="card-title mb-0">Flexible Scheduling</h5>
+                            </div>
+                            <p class="card-text text-secondary">Candidates can interview 24/7, increasing your applicant pool and reducing dropoffs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 border-0 rounded-3 p-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-phone feature-icon"></i>
+                                <h5 class="card-title mb-0">Seamless Integration</h5>
+                            </div>
+                            <p class="card-text text-secondary">Works with your existing ATS and HR systems for a smooth hiring workflow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">What Our Users Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-3 p-4">
+                        <div class="card-body">
+                            <p class="card-text mb-4 fst-italic">"InterviewAI reduced our hiring timeline from weeks to days. The quality of candidates we're getting is exceptional, and our team can focus on growth instead of screening."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-circle me-3">JD</div>
+                                <div>
+                                    <h6 class="mb-0">Jane Doe</h6>
+                                    <small class="text-secondary">CTO, TechStartup Inc.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-3 p-4">
+                        <div class="card-body">
+                            <p class="card-text mb-4 fst-italic">"As a developer, I appreciate the fair assessment of my skills. The platform gave me constructive feedback even when I didn't get the job, which helped me improve."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-circle me-3">JS</div>
+                                <div>
+                                    <h6 class="mb-0">John Smith</h6>
+                                    <small class="text-secondary">Senior Developer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-3 p-4">
+                        <div class="card-body">
+                            <p class="card-text mb-4 fst-italic">"We've increased our diversity hiring by 45% since implementing InterviewAI. The unbiased screening has helped us build a more inclusive tech team."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-circle me-3">AR</div>
+                                <div>
+                                    <h6 class="mb-0">Amanda Rodriguez</h6>
+                                    <small class="text-secondary">HR Director, Enterprise Solutions</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-5 bg-light-green">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3">Ready to Transform Your Hiring Process?</h2>
+            <p class="text-secondary mb-4 mx-auto" style="max-width: 700px;">Join thousands of companies and candidates who are making tech hiring smarter, faster, and fairer with InterviewAI.</p>
+            <div>
+                <button class="btn btn-primary-green btn-lg me-2 mb-2">Get Started for Free</button>
+                <button class="btn btn-outline-green btn-lg mb-2">Request a Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-4">
+                    <h4 class="text-primary-green mb-3">InterviewAI</h4>
+                    <p class="text-secondary mb-3">Revolutionizing tech hiring with AI-powered interviews that save time and eliminate bias.</p>
+                    <div class="d-flex">
+                        <a href="#" class="social-icon me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-icon me-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon me-2"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2 mb-4">
+                    <h5 class="mb-3">For Companies</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">How It Works</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Pricing</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Enterprise</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-2 mb-4">
+                    <h5 class="mb-3">For Candidates</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Find Jobs</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Interview Prep</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Resources</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Career Advice</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <h5 class="mb-3">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Partners</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-4 mt-3 text-center text-secondary">
+                <p>&copy; 2025 InterviewAI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
