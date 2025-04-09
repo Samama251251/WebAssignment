@@ -1,0 +1,120 @@
+:root {
+    --primary-green: #14a800;
+    --secondary-green: #0e8f0d;
+    --light-green: #e4f7e3;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--light-green);
+}
+
+.navbar-brand span {
+    color: #222;
+}
+
+.text-primary-green {
+    color: var(--primary-green) !important;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.25rem rgba(20, 168, 0, 0.25);
+}
+
+.input-group-text {
+    background-color: var(--light-green);
+    border: 1px solid #ced4da;
+    color: var(--primary-green);
+}
+
+.btn-primary-green {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-green:hover {
+    background-color: var(--secondary-green);
+    border-color: var(--secondary-green);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.nav-pills .nav-link {
+    color: #666;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+    background-color: var(--light-green);
+    color: var(--primary-green);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+.form-check-input:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.25rem rgba(20, 168, 0, 0.25);
+}
+
+a {
+    color: var(--primary-green);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-green);
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin: 1rem;
+    }
+    
+    .nav-pills .nav-link {
+        padding: 0.5rem 1rem;
+    }
+}
+
+.form-control, .input-group-text, .btn {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
