@@ -1,0 +1,291 @@
+/* Base Colors and Styles */
+:root {
+    --primary-green: #14a800;
+    --secondary-green: #0e8f0d;
+    --light-green: #e4f7e3;
+    --dark-green: #0a6b09;
+    --text-dark: #222222;
+    --text-secondary: #666666;
+    --background-light: #f8f9fa;
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-dark);
+    scroll-behavior: smooth;
+}
+
+/* Background and Text Colors */
+.bg-light-green {
+    background-color: var(--light-green);
+}
+
+.text-primary-green {
+    color: var(--primary-green);
+}
+
+/* Button Styles */
+.btn-primary-green {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: white;
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-primary-green:hover {
+    background-color: var(--secondary-green);
+    border-color: var(--secondary-green);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(20, 168, 0, 0.2);
+}
+
+.btn-outline-green {
+    color: var(--primary-green);
+    border-color: var(--primary-green);
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-outline-green:hover {
+    background-color: var(--light-green);
+    color: var(--primary-green);
+    transform: translateY(-2px);
+}
+
+/* Navbar Styles */
+.navbar {
+    transition: all var(--transition-speed) ease;
+}
+
+.navbar-brand span {
+    color: var(--text-dark);
+}
+
+.nav-link {
+    position: relative;
+    transition: color var(--transition-speed) ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-green);
+    left: 0;
+    bottom: -2px;
+    transition: width var(--transition-speed) ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--primary-green) !important;
+}
+
+/* Card and Feature Styles */
+.card {
+    border-radius: 10px;
+    transition: all var(--transition-speed) ease;
+    overflow: hidden;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-card {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 100px;
+    color: rgba(20, 168, 0, 0.05);
+    font-family: Georgia, serif;
+    z-index: -1;
+}
+
+/* Icon Styles */
+.step-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--light-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.75rem;
+    color: var(--primary-green);
+    position: relative;
+    transition: all var(--transition-speed) ease;
+}
+
+.card-hover:hover .step-icon {
+    background-color: var(--primary-green);
+    color: white;
+    transform: scale(1.1);
+}
+
+.feature-icon {
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    transition: transform var(--transition-speed) ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.2);
+}
+
+.avatar-circle {
+    width: 50px;
+    height: 50px;
+    background: var(--light-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-green);
+    font-weight: bold;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 0.5rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-green);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Image Styles */
+.hero-img {
+    transition: transform 0.5s ease;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-img:hover {
+    transform: perspective(500px) rotateY(5deg);
+}
+
+.candidate-img {
+    transition: transform 0.5s ease;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-img:hover {
+    transform: perspective(500px) rotateY(-5deg);
+}
+
+.partner-logo {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all var(--transition-speed) ease;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+}
+
+footer a {
+    transition: color var(--transition-speed) ease;
+}
+
+footer a:hover {
+    color: var(--primary-green) !important;
+    text-decoration: underline !important;
+}
+
+/* Animation for CTA buttons */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(20, 168, 0, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(20, 168, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(20, 168, 0, 0);
+    }
+}
+
+.bg-light-green .btn-primary-green {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        margin-top: 15px;
+    }
+    
+    .navbar .btn {
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .step-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .hero-img, .candidate-img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}
