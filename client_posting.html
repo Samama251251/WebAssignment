@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="client_posting_style.css">
 </head>
 <body>
-    <!-- Toop of the Page (Company Name, HREFS to other pages) -->
+    <!-- Top  -->
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
         <div class="container">
             <a class="navbar-brand mx-auto" href="#">
@@ -36,8 +36,8 @@
         </div>
     </nav>
 
-    <!-- Welcome Portion For A Client -->
-     <div class ="welcome">
+    <!-- welcome -->
+     <div class="welcome">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -51,9 +51,51 @@
         </div>
      </div>
     
-
-        
-    
+    <!-- Upcoming Interviews Section -->
+    <section class="upcoming-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info-card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-calendar-check me-2"></i>Upcoming Interviews</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="interview-item">
+                                <h6>Data Scientist</h6>
+                                <p>Tech Innovations Inc.</p>
+                                <span class="badge bg-success">AI Interview - Apr 12, 2025</span>
+                            </div>
+                            <div class="interview-item">
+                                <h6>UX Designer</h6>
+                                <p>Creative Designs Co.</p>
+                                <span class="badge bg-primary">Technical Round - Apr 15, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-briefcase me-2"></i>Upcoming Jobs</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="job-item">
+                                <h6>ML Engineer</h6>
+                                <p>Data Analytics Pro</p>
+                                <p><i class="fas fa-map-marker-alt me-1"></i> Remote | <i class="fas fa-dollar-sign me-1"></i> $110k-$140k</p>
+                            </div>
+                            <div class="job-item">
+                                <h6>Frontend Developer</h6>
+                                <p>Global Solutions Ltd.</p>
+                                <p><i class="fas fa-map-marker-alt me-1"></i> New York | <i class="fas fa-dollar-sign me-1"></i> $90k-$120k</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Search Section -->
     <section class="search-section">
@@ -61,15 +103,23 @@
             <div class="row">
                 <div class="col-md-12">
                     <h3 class="search-title">Search Companies</h3>
-                    <div class="form-group mb-4">
-                        <select class="form-select" id="companySelect">
-                            <option selected disabled>Select a company</option>
-                            <option value="company1">Tech Innovations Inc.</option>
-                            <option value="company2">Global Solutions Ltd.</option>
-                            <option value="company3">Future Technologies</option>
-                            <option value="company4">Creative Designs Co.</option>
-                            <option value="company5">Data Analytics Pro</option>
-                        </select>
+                    <div class="row g-3">
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="Job title or keywords">
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select" id="companySelect">
+                                <option selected disabled>Select a company</option>
+                                <option value="company1">Tech Innovations Inc.</option>
+                                <option value="company2">Global Solutions Ltd.</option>
+                                <option value="company3">Future Technologies</option>
+                                <option value="company4">Creative Designs Co.</option>
+                                <option value="company5">Data Analytics Pro</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-primary w-100">Search Jobs</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -80,106 +130,346 @@
     <section class="job-listing">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div id="jobDetails" style="display: none;">
-                        <div class="job-card">
-                            <div class="job-header">
-                                <h4 id="jobTitle">Senior Software Developer</h4>
-                                <p id="companyName" class="mb-0">Tech Innovations Inc.</p>
+                <div class="col-md-4">
+                    <!-- Filters Section -->
+                    <div class="filters-card">
+                        <h5>Filter Jobs</h5>
+                        <div class="filter-group">
+                            <h6>Experience Level</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="entryLevel">
+                                <label class="form-check-label" for="entryLevel">Entry Level</label>
                             </div>
-                            <div class="job-content">
-                                <div class="row mb-3">
-                                    <div class="col-md-4">
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-map-marker-alt text-muted me-2"></i>
-                                            <span id="jobLocation">San Francisco, CA</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-clock text-muted me-2"></i>
-                                            <span id="jobType">Full-time</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-dollar-sign text-muted me-2"></i>
-                                            <span id="jobSalary">$120,000 - $150,000</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h5>Job Description</h5>
-                                <p id="jobDescription">
-                                    We are seeking an experienced Senior Software Developer to join our dynamic team. The ideal candidate will have a strong background in full-stack development, with expertise in JavaScript, React, and Node.js. You will be responsible for designing, developing, and maintaining our core products, collaborating with cross-functional teams, and mentoring junior developers.
-                                </p>
-                                <h5>Requirements</h5>
-                                <ul id="jobRequirements">
-                                    <li>5+ years of experience in software development</li>
-                                    <li>Strong proficiency in JavaScript, HTML, CSS</li>
-                                    <li>Experience with React, Node.js, and Express</li>
-                                    <li>Familiarity with database technologies (MongoDB, PostgreSQL)</li>
-                                    <li>Bachelor's degree in Computer Science or related field</li>
-                                </ul>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="midLevel">
+                                <label class="form-check-label" for="midLevel">Mid Level</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="seniorLevel">
+                                <label class="form-check-label" for="seniorLevel">Senior Level</label>
                             </div>
                         </div>
+                        
+                        <div class="filter-group">
+                            <h6>Job Type</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="fullTime">
+                                <label class="form-check-label" for="fullTime">Full-time</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="partTime">
+                                <label class="form-check-label" for="partTime">Part-time</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="contract">
+                                <label class="form-check-label" for="contract">Contract</label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h6>Salary Range</h6>
+                            <div class="mb-3">
+                                <label for="minSalary" class="form-label">Minimum</label>
+                                <select class="form-select" id="minSalary">
+                                    <option value="30000">$30,000</option>
+                                    <option value="50000">$50,000</option>
+                                    <option value="75000">$75,000</option>
+                                    <option value="100000">$100,000</option>
+                                    <option value="125000">$125,000</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="maxSalary" class="form-label">Maximum</label>
+                                <select class="form-select" id="maxSalary">
+                                    <option value="50000">$50,000</option>
+                                    <option value="75000">$75,000</option>
+                                    <option value="100000">$100,000</option>
+                                    <option value="150000" selected>$150,000</option>
+                                    <option value="200000">$200,000+</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary w-100 mt-3">Apply Filters</button>
+                    </div>
+                </div>
+                
+                <div class="col-md-8">
+                    <!-- Jobs List -->
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h4>Senior Software Developer</h4>
+                            <p class="mb-0">Tech Innovations Inc.</p>
+                        </div>
+                        <div class="job-content">
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                                        <span>San Francisco, CA</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-clock text-muted me-2"></i>
+                                        <span>Full-time</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-dollar-sign text-muted me-2"></i>
+                                        <span>$120,000 - $150,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                We are seeking an experienced Senior Software Developer to join our dynamic team. The ideal candidate will have a strong background in full-stack development, with expertise in JavaScript, React, and Node.js.
+                            </p>
+                            <div class="job-tags mb-3">
+                                <span class="badge bg-light text-dark">JavaScript</span>
+                                <span class="badge bg-light text-dark">React</span>
+                                <span class="badge bg-light text-dark">Node.js</span>
+                            </div>
+                            <div class="interview-process">
+                                <h6>Interview Process:</h6>
+                                <div class="d-flex justify-content-between">
+                                    <div class="process-step active">Application Review</div>
+                                    <div class="process-step">AI-Based DSA Assessment</div>
+                                    <div class="process-step">Technical Interview</div>
+                                    <div class="process-step">Final Decision</div>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <button class="btn btn-primary me-2">View Details</button>
+                                <button class="btn btn-outline-primary">Apply Now</button>
+                            </div>
+                        </div>
+                    </div>
 
-                        <!-- Application Form -->
-                        <div class="application-form mt-4">
-                            <h4 class="mb-4">Apply for this Position</h4>
-                            <form id="applicationForm">
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="firstName" class="form-label">First Name</label>
-                                        <input type="text" class="form-control" id="firstName" required>
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h4>Data Scientist</h4>
+                            <p class="mb-0">Data Analytics Pro</p>
+                        </div>
+                        <div class="job-content">
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                                        <span>New York, NY</span>
                                     </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="lastName" class="form-label">Last Name</label>
-                                        <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-clock text-muted me-2"></i>
+                                        <span>Full-time</span>
                                     </div>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-dollar-sign text-muted me-2"></i>
+                                        <span>$110,000 - $140,000</span>
+                                    </div>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="phone" class="form-label">Phone</label>
-                                    <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            <p>
+                                We're looking for a Data Scientist to help us leverage big data to drive business decisions. The ideal candidate will have experience with machine learning and Python.
+                            </p>
+                            <div class="job-tags mb-3">
+                                <span class="badge bg-light text-dark">Python</span>
+                                <span class="badge bg-light text-dark">Machine Learning</span>
+                                <span class="badge bg-light text-dark">SQL</span>
+                                <span class="badge bg-light text-dark">TensorFlow</span>
+                            </div>
+                            <div class="interview-process">
+                                <h6>Interview Process:</h6>
+                                <div class="d-flex justify-content-between">
+                                    <div class="process-step active">Resume Screening</div>
+                                    <div class="process-step">AI Technical Assessment</div>
+                                    <div class="process-step">Case Study Interview</div>
+                                    <div class="process-step">Team Interview</div>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="resume" class="form-label">Upload Resume</label>
-                                    <input type="file" class="form-control" id="resume" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="coverLetter" class="form-label">Cover Letter</label>
-                                    <textarea class="form-control" id="coverLetter" rows="5" placeholder="Tell us why you're the perfect fit for this role..."></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="applicationDetails" class="form-label">Additional Details</label>
-                                    <textarea class="form-control" id="applicationDetails" rows="5" placeholder="Any additional information you'd like to share..."></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit Application</button>
-                            </form>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <button class="btn btn-primary me-2">View Details</button>
+                                <button class="btn btn-outline-primary">Apply Now</button>
+                            </div>
                         </div>
                     </div>
-                    <div id="noJobSelected" class="text-center py-5">
-                        <i class="fas fa-search fa-3x text-muted mb-3"></i>
-                        <h4 class="text-muted">Please select a company to view job openings</h4>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h4>UX/UI Designer</h4>
+                            <p class="mb-0">Creative Designs Co.</p>
+                        </div>
+                        <div class="job-content">
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                                        <span>Remote</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-clock text-muted me-2"></i>
+                                        <span>Full-time</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-dollar-sign text-muted me-2"></i>
+                                        <span>$90,000 - $110,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                Creative Designs Co. is looking for a talented UX/UI Designer to join our creative team. You'll be responsible for designing intuitive user interfaces.
+                            </p>
+                            <div class="job-tags mb-3">
+                                <span class="badge bg-light text-dark">Figma</span>
+                                <span class="badge bg-light text-dark">Adobe XD</span>
+                                <span class="badge bg-light text-dark">UI/UX</span>
+                            </div>
+                            <div class="interview-process">
+                                <h6>Interview Process:</h6>
+                                <div class="d-flex justify-content-between">
+                                    <div class="process-step active">Application Review</div>
+                                    <div class="process-step">Portfolio Assessment</div>
+                                    <div class="process-step">AI Design Challenge</div>
+                                    <div class="process-step">Final Interview</div>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <button class="btn btn-primary me-2">View Details</button>
+                                <button class="btn btn-outline-primary">Apply Now</button>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center mt-4">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
     </section>
+
+<!-- How It Works Section -->
+<section class="how-it-works">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center mb-4">
+                <h3 class="section-title">How AI Interviews Work</h3>
+                <p class="section-subtitle">Our automated interview process makes hiring efficient and fair</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h5>Apply</h5>
+                    <p>Submit your application and resume through our platform.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h5>AI Assessment</h5>
+                    <p>Complete technical or behavioral challenges through our AI system.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h5>Detailed Analysis</h5>
+                    <p>Receive feedback and analysis of your performance.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h5>Next Rounds</h5>
+                    <p>Move forward to human interviews with hiring teams.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12 text-center">
+                <button class="btn btn-outline-primary">Learn More About Our Process</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center mb-4">
+                <h3 class="section-title">Success Stories</h3>
+                <p class="section-subtitle">Hear from candidates who found their dream jobs</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The AI interview process was surprisingly comfortable and allowed me to showcase my skills in a way traditional interviews couldn't. I'm now working at my dream company!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h6>Sarah Johnson</h6>
+                            <p>Software Engineer at Tech Innovations Inc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As someone with anxiety about interviews, the AI assessment gave me a chance to demonstrate my abilities without the pressure. The detailed feedback also helped me improve."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h6>Michael Chen</h6>
+                            <p>Data Scientist at Data Analytics Pro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5>JobSeeker</h5>
-                    <p>Find your dream job with ease.</p>
+                    <h5>GenAI Interview</h5>
+                    <p>Find your dream job with AI-powered interviews.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p>&copy; 2025 JobSeeker. All rights reserved.</p>
+                    <p>&copy; 2025 GenAI Interview. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -187,6 +477,5 @@
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="client_posting_js.js"></script>
 </body>
 </html>
