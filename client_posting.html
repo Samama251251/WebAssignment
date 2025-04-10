@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Portal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="client_posting_style.css">
+</head>
+<body>
+    <!-- Toop of the Page (Company Name, HREFS to other pages) -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <div class="container">
+            <a class="navbar-brand mx-auto" href="#">
+                <span class="brand-text">GenAI Interview</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Companies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Portion For A Client -->
+     <div class ="welcome">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="welcome-message">
+                        <i class="fas fa-user-circle me-2"></i>
+                        Welcome, User!
+                    </h2>
+                    <p class="text-muted">Find your job and let AI automate the interview!</p>
+                </div>
+            </div>
+        </div>
+     </div>
+    
+
+        
+    
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="search-title">Search Companies</h3>
+                    <div class="form-group mb-4">
+                        <select class="form-select" id="companySelect">
+                            <option selected disabled>Select a company</option>
+                            <option value="company1">Tech Innovations Inc.</option>
+                            <option value="company2">Global Solutions Ltd.</option>
+                            <option value="company3">Future Technologies</option>
+                            <option value="company4">Creative Designs Co.</option>
+                            <option value="company5">Data Analytics Pro</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Listing Section -->
+    <section class="job-listing">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="jobDetails" style="display: none;">
+                        <div class="job-card">
+                            <div class="job-header">
+                                <h4 id="jobTitle">Senior Software Developer</h4>
+                                <p id="companyName" class="mb-0">Tech Innovations Inc.</p>
+                            </div>
+                            <div class="job-content">
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                                            <span id="jobLocation">San Francisco, CA</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-clock text-muted me-2"></i>
+                                            <span id="jobType">Full-time</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-dollar-sign text-muted me-2"></i>
+                                            <span id="jobSalary">$120,000 - $150,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h5>Job Description</h5>
+                                <p id="jobDescription">
+                                    We are seeking an experienced Senior Software Developer to join our dynamic team. The ideal candidate will have a strong background in full-stack development, with expertise in JavaScript, React, and Node.js. You will be responsible for designing, developing, and maintaining our core products, collaborating with cross-functional teams, and mentoring junior developers.
+                                </p>
+                                <h5>Requirements</h5>
+                                <ul id="jobRequirements">
+                                    <li>5+ years of experience in software development</li>
+                                    <li>Strong proficiency in JavaScript, HTML, CSS</li>
+                                    <li>Experience with React, Node.js, and Express</li>
+                                    <li>Familiarity with database technologies (MongoDB, PostgreSQL)</li>
+                                    <li>Bachelor's degree in Computer Science or related field</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Application Form -->
+                        <div class="application-form mt-4">
+                            <h4 class="mb-4">Apply for this Position</h4>
+                            <form id="applicationForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="resume" class="form-label">Upload Resume</label>
+                                    <input type="file" class="form-control" id="resume" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="coverLetter" class="form-label">Cover Letter</label>
+                                    <textarea class="form-control" id="coverLetter" rows="5" placeholder="Tell us why you're the perfect fit for this role..."></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="applicationDetails" class="form-label">Additional Details</label>
+                                    <textarea class="form-control" id="applicationDetails" rows="5" placeholder="Any additional information you'd like to share..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit Application</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="noJobSelected" class="text-center py-5">
+                        <i class="fas fa-search fa-3x text-muted mb-3"></i>
+                        <h4 class="text-muted">Please select a company to view job openings</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>JobSeeker</h5>
+                    <p>Find your dream job with ease.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2025 JobSeeker. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="client_posting_js.js"></script>
+</body>
+</html>

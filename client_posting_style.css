@@ -1,0 +1,108 @@
+:root {
+    --primary-green: #14a800;
+    --light-green: #0e8f0d;
+    --very-light-green: #e4f7e3;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    background-color: var(--primary-green);
+}
+
+.welcome {
+    background-color: var(--very-light-green);
+    padding: 15px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.welcome-message {
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.search-section {
+    background-color: white;
+    padding: 2rem 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.search-title {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+}
+
+.job-listing {
+    background-color: var(--very-light-green);
+    padding: 2rem 0;
+}
+
+.job-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--light-green);
+}
+
+.job-header {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 1rem;
+}
+
+.job-content {
+    padding: 1.5rem;
+}
+
+.application-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+.btn-primary:hover {
+    background-color: var(--light-green);
+    border-color: var(--light-green);
+}
+
+.form-control:focus {
+    border-color: var(--light-green);
+    box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+}
+
+footer {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 1.5rem 0;
+}
+
+.navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-brand i {
+    font-size: 30px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: color 0.3s ease-in-out;
+}
