@@ -10,6 +10,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/Landing_page_styles.css" rel="stylesheet">
+    <!-- FAQ Styles -->
+    <link href="css/faq-styles.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -371,6 +373,117 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light-green" id="faq">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-3">Frequently Asked Questions</h2>
+            <p class="text-center text-secondary mb-5">Everything you need to know about InterviewAI</p>
+            
+            <div class="row mb-4">
+                <div class="col-lg-10 mx-auto">
+                    <div class="faq-categories">
+                        <div class="faq-category active" data-category="all">All</div>
+                        <div class="faq-category" data-category="companies">For Companies</div>
+                        <div class="faq-category" data-category="candidates">For Candidates</div>
+                        <div class="faq-category" data-category="platform">Platform</div>
+                        <div class="faq-category" data-category="pricing">Pricing</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="faq-container">
+                        <div class="faq-item" data-category="companies platform" style="--animation-order: 1;">
+                            <div class="faq-header">
+                                <h3>How does InterviewAI's AI interviewer work?</h3>
+                                <i class="bi bi-chevron-down faq-header-icon"></i>
+                            </div>
+                            <div class="faq-content">
+                                <p>Our AI interviewer uses advanced natural language processing and machine learning algorithms to conduct technical interviews. It evaluates candidate responses to technical questions, reviews code in real-time, and assesses problem-solving approaches. The system adapts questions based on candidate performance and provides objective scoring across multiple dimensions including technical knowledge, code quality, and problem-solving ability.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item" data-category="companies pricing" style="--animation-order: 2;">
+                            <div class="faq-header">
+                                <h3>Can I customize the interview questions for my company's needs?</h3>
+                                <i class="bi bi-chevron-down faq-header-icon"></i>
+                            </div>
+                            <div class="faq-content">
+                                <p>Yes! Growth and Enterprise plans include the ability to customize interview templates to match your specific requirements. You can select from our extensive library of technical questions or create your own. You can also define specific evaluation criteria and skill assessments relevant to your open positions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item" data-category="candidates" style="--animation-order: 3;">
+                            <div class="faq-header">
+                                <h3>How should I prepare for an InterviewAI interview?</h3>
+                                <i class="bi bi-chevron-down faq-header-icon"></i>
+                            </div>
+                            <div class="faq-content">
+                                <p>Prepare for an InterviewAI interview just as you would for a traditional technical interview. Review fundamental concepts in your area of expertise, practice coding problems, and be ready to explain your thought process clearly. Our platform provides a comfortable environment where you can showcase your skills without the pressure of human judgment. Make sure you have a stable internet connection, a quiet environment, and set aside sufficient uninterrupted time for the interview.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item" data-category="platform" style="--animation-order: 4;">
+                            <div class="faq-header">
+                                <h3>Is InterviewAI secure and private?</h3>
+                                <i class="bi bi-chevron-down faq-header-icon"></i>
+                            </div>
+                            <div class="faq-content">
+                                <p>Absolutely. We take security and privacy extremely seriously. All data transmitted through our platform is encrypted using industry-standard protocols. Candidate information is stored securely and only shared with the hiring company. Our system complies with GDPR, CCPA, and other relevant data protection regulations. We do not use interview data to train our AI models without explicit consent.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item" data-category="pricing" style="--animation-order: 5;">
+                            <div class="faq-header">
+                                <h3>Do you offer discounts for startups or educational institutions?</h3>
+                                <i class="bi bi-chevron-down faq-header-icon"></i>
+                            </div>
+                            <div class="faq-content">
+                                <p>Yes, we offer special pricing for startups, educational institutions, and non-profit organizations. Please contact our sales team for more information about our discount programs and eligibility requirements. We're committed to making our platform accessible to organizations of all sizes and budgets.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item" data-category="companies candidates" style="--animation-order: 6;">
+                            <div class="faq-header">
+                                <h3>What programming languages and frameworks does InterviewAI support?</h3>
+                                <i class="bi bi-chevron-down faq-header-icon"></i>
+                            </div>
+                            <div class="faq-content">
+                                <p>InterviewAI supports a wide range of programming languages including JavaScript, Python, Java, C#, Ruby, Go, PHP, Swift, Kotlin, and more. We also offer framework-specific assessments for popular technologies like React, Angular, Vue, Node.js, Django, Spring Boot, and many others. Our platform is constantly updated to include new languages and frameworks as they gain industry adoption.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item" data-category="candidates" style="--animation-order: 7;">
+                            <div class="faq-header">
+                                <h3>Will I receive feedback after my interview?</h3>
+                                <i class="bi bi-chevron-down faq-header-icon"></i>
+                            </div>
+                            <div class="faq-content">
+                                <p>Yes, all candidates receive detailed feedback after completing an interview with InterviewAI, regardless of the outcome. This feedback includes strengths, areas for improvement, and specific insights on technical skills assessed during the interview. Many candidates find this feedback invaluable for their professional development, even if they don't proceed to the next stage with a particular company.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item" data-category="platform companies" style="--animation-order: 8;">
+                            <div class="faq-header">
+                                <h3>Can InterviewAI integrate with our existing Applicant Tracking System?</h3>
+                                <i class="bi bi-chevron-down faq-header-icon"></i>
+                            </div>
+                            <div class="faq-content">
+                                <p>Yes, InterviewAI integrates seamlessly with most popular Applicant Tracking Systems including Greenhouse, Lever, Workday, Taleo, and more. For Enterprise customers, we offer custom API integrations for proprietary systems. Our platform can be configured to automatically send interview results, candidate reports, and scoring data directly to your ATS, creating a streamlined workflow.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-empty">
+                            <i class="bi bi-search"></i>
+                            <p>No matching questions found. Please try a different search term.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Partners Section -->
     <section class="py-5 bg-light">
         <div class="container">
@@ -391,39 +504,6 @@
                 <div class="col-6 col-md-2 mb-4 mb-md-0 text-center">
                     <img src="images/arbisoft.png" alt="Company Logo 5" class="img-fluid partner-logo">
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="fw-bold mb-4">Stay Updated on Hiring Trends</h2>
-                    <p class="text-secondary mb-4">Subscribe to our newsletter for the latest AI hiring insights, industry trends, and tech recruiting strategies.</p>
-                    <div class="row justify-content-center">
-                        <div class="col-md-8">
-                            <div class="input-group mb-3">
-                                <input type="email" class="form-control" placeholder="Enter your email address" aria-label="Email address">
-                                <button class="btn btn-primary-green" type="button">Subscribe</button>
-                            </div>
-                            <p class="small text-muted">We respect your privacy. No spam, ever.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="py-5 bg-light-green">
-        <div class="container text-center">
-            <h2 class="fw-bold mb-3">Ready to Transform Your Hiring Process?</h2>
-            <p class="text-secondary mb-4 mx-auto" style="max-width: 700px;">Join thousands of companies and candidates who are making tech hiring smarter, faster, and fairer with InterviewAI.</p>
-            <div>
-                <button class="btn btn-primary-green btn-lg me-2 mb-2">Get Started for Free</button>
-                <button class="btn btn-outline-green btn-lg mb-2">Request a Demo</button>
             </div>
         </div>
     </section>
@@ -475,5 +555,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Bootstrap and custom JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/landing.js"></script>
 </body>
 </html>
