@@ -1,24 +1,50 @@
 /* Base Colors and Styles */
 :root {
-    --primary-green: #14a800;
+    /* Light theme variables */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --border-color: #dee2e6;
+    --primary-green: #28a745;
+    --card-bg: #ffffff;
     --secondary-green: #0e8f0d;
     --light-green: #e4f7e3;
     --dark-green: #0a6b09;
     --text-dark: #222222;
-    --text-secondary: #666666;
     --background-light: #f8f9fa;
     --transition-speed: 0.3s;
 }
 
+[data-theme="dark"] {
+    /* Dark theme variables */
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #ced4da;
+    --border-color: #404040;
+    --primary-green: #2ecc71;
+    --card-bg: #333333;
+    --faq-bg: #2d2d2d;
+    --faq-border: #404040;
+    --faq-hover: #3a3a3a;
+    --pricing-card-bg: #2d2d2d;
+    --pricing-card-border: #404040;
+    --pricing-card-hover: #383838;
+}
+
+/* Apply theme variables */
 body {
     font-family: 'Arial', sans-serif;
-    color: var(--text-dark);
+    color: var(--text-primary);
     scroll-behavior: smooth;
+    background-color: var(--bg-primary);
+    transition: all 0.3s ease;
 }
 
 /* Background and Text Colors */
-.bg-light-green {
-    background-color: var(--light-green);
+.bg-light {
+    background-color: var(--bg-secondary) !important;
 }
 
 .text-primary-green {
@@ -53,18 +79,30 @@ body {
     transform: translateY(-2px);
 }
 
+.btn-outline-secondary {
+    border-color: var(--text-secondary);
+    color: var(--text-secondary);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--text-secondary);
+    color: var(--bg-primary);
+}
+
 /* Navbar Styles */
 .navbar {
     transition: all var(--transition-speed) ease;
+    background-color: var(--bg-primary) !important;
 }
 
 .navbar-brand span {
-    color: var(--text-dark);
+    color: var(--text-primary);
 }
 
 .nav-link {
     position: relative;
     transition: color var(--transition-speed) ease;
+    color: var(--text-primary) !important;
 }
 
 .nav-link::after {
@@ -91,6 +129,7 @@ body {
     border-radius: 10px;
     transition: all var(--transition-speed) ease;
     overflow: hidden;
+    background-color: var(--card-bg);
 }
 
 .card-hover:hover {
@@ -288,4 +327,173 @@ footer a:hover {
         padding: 0.5rem 1rem;
         font-size: 1rem;
     }
+}
+
+/* Theme Toggle Button */
+#themeToggle {
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#themeToggle:hover {
+    background-color: var(--bg-secondary);
+}
+
+#themeToggle i {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+/* Dark mode specific overrides */
+[data-theme="dark"] .card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+[data-theme="dark"] .bg-light-green {
+    background-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] .navbar {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .faq-category {
+    background-color: var(--faq-bg);
+    color: var(--text-secondary);
+    border: 1px solid var(--faq-border);
+}
+
+[data-theme="dark"] .faq-category:hover,
+[data-theme="dark"] .faq-category.active {
+    background-color: var(--primary-green);
+    color: var(--bg-primary);
+    border-color: var(--primary-green);
+}
+
+[data-theme="dark"] .faq-item {
+    background-color: var(--faq-bg);
+    border: 1px solid var(--faq-border);
+}
+
+[data-theme="dark"] .faq-header {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .faq-content {
+    color: var(--text-secondary);
+    border-top: 1px solid var(--faq-border);
+}
+
+[data-theme="dark"] .faq-item:hover {
+    background-color: var(--faq-hover);
+}
+
+[data-theme="dark"] .faq-empty {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .faq-header-icon {
+    color: var(--text-secondary);
+}
+
+/* Pricing Card Styles */
+.pricing-card {
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-title {
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.pricing-price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.pricing-duration {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.pricing-feature {
+    color: var(--text-primary);
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pricing-feature i {
+    color: var(--primary-green);
+}
+
+.pricing-feature.disabled {
+    color: var(--text-secondary);
+    text-decoration: line-through;
+}
+
+/* Dark mode specific overrides for pricing */
+[data-theme="dark"] .pricing-card {
+    background-color: var(--pricing-card-bg);
+    border-color: var(--pricing-card-border);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .pricing-card:hover {
+    background-color: var(--pricing-card-hover);
+    border-color: var(--primary-green);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .pricing-title {
+    color: var(--primary-green);
+}
+
+[data-theme="dark"] .pricing-price {
+    color: var(--text-primary);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .pricing-duration {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .pricing-feature {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .pricing-feature i {
+    color: var(--primary-green);
+}
+
+[data-theme="dark"] .pricing-feature.disabled {
+    color: var(--text-secondary);
+    opacity: 0.6;
+}
+
+[data-theme="dark"] .btn-outline-green {
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+}
+
+[data-theme="dark"] .btn-outline-green:hover {
+    background-color: var(--primary-green);
+    color: var(--bg-primary);
 }
