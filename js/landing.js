@@ -11,6 +11,7 @@
         initFaqAccordion();
         initFaqSearch();
         initFaqCategories();
+        enhanceWithAnimations();
     }
     
     /**
@@ -173,6 +174,51 @@
                 }
             });
         });
+    }
+    
+    /**
+     * Enhance page with additional animations
+     */
+    function enhanceWithAnimations() {
+        // Apply staggered animations to FAQ items if not already animated
+        const faqAccordion = document.querySelector('.faq-accordion');
+        if (faqAccordion && !faqAccordion.classList.contains('stagger-list')) {
+            const faqItems = faqAccordion.querySelectorAll('.faq-item');
+            
+            // Add staggered animation classes
+            faqAccordion.classList.add('stagger-list', 'animate-on-scroll');
+            faqItems.forEach((item, index) => {
+                // Use animation-order for CSS animations
+                item.style.setProperty('--animation-order', index);
+            });
+        }
+        
+        // Enhance feature card animations
+        document.querySelectorAll('.feature-card').forEach(card => {
+            if (!card.classList.contains('animate-on-scroll')) {
+                card.classList.add('animate-on-scroll', 'fade-in-up');
+            }
+        });
+        
+        // Add image hover effects to testimonial images
+        document.querySelectorAll('.testimonial-card').forEach(card => {
+            const avatar = card.querySelector('.avatar-circle');
+            if (avatar && !avatar.closest('.img-hover-zoom')) {
+                const parent = avatar.parentElement;
+                parent.classList.add('img-hover-zoom');
+            }
+        });
+        
+        // Add smooth reveal animation to pricing cards
+        const pricingSection = document.querySelector('#pricing');
+        if (pricingSection) {
+            const pricingCards = pricingSection.querySelectorAll('.card');
+            pricingCards.forEach((card, index) => {
+                card.classList.add('animate-on-scroll');
+                card.dataset.animation = 'fade-in-up';
+                card.dataset.delay = (index * 0.15) + 's';
+            });
+        }
     }
     
     // Initialize on page load
