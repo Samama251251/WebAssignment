@@ -44,6 +44,9 @@
                         </li>
                     </ul>
                     <div class="d-flex">
+                        <button id="themeToggle" class="btn btn-outline-secondary me-2" aria-label="Toggle theme">
+                            <i class="bi bi-moon"></i>
+                        </button>
                         <a href="html/auth.html" class="btn btn-outline-green me-2">Log In</a>
                         <a href="html/auth.html" class="btn btn-primary-green">Sign Up</a>
                     </div>
@@ -263,59 +266,114 @@
         <div class="container">
             <h2 class="text-center fw-bold mb-5">Simple, Transparent Pricing</h2>
             <div class="row justify-content-center">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 rounded-3 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <h5 class="text-primary-green fw-bold mb-3">Startup</h5>
-                            <h2 class="display-5 fw-bold mb-3">$499<small class="fs-6 text-secondary">/month</small></h2>
-                            <p class="text-secondary mb-4">Perfect for growing teams making up to 5 hires per month</p>
-                            <ul class="list-unstyled text-start mb-4">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-green me-2"></i>Up to 20 interviews/month</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-green me-2"></i>Basic analytics dashboard</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-green me-2"></i>Email support</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-green me-2"></i>Standard question library</li>
-                                <li class="mb-2 text-muted"><i class="bi bi-x-circle me-2"></i>Custom interview templates</li>
-                                <li class="mb-2 text-muted"><i class="bi bi-x-circle me-2"></i>API access</li>
-                            </ul>
-                            <button class="btn btn-outline-green w-100">Get Started</button>
+                <div class="col-lg-4 mb-4">
+                    <div class="pricing-card p-4">
+                        <h3 class="pricing-title mb-4">Startup</h3>
+                        <div class="d-flex align-items-baseline mb-4">
+                            <span class="pricing-price">$499</span>
+                            <span class="pricing-duration">/month</span>
                         </div>
+                        <p class="text-secondary mb-4">Perfect for growing teams making up to 5 hires per month</p>
+                        <div class="pricing-features mb-4">
+                            <div class="pricing-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Up to 20 interviews/month</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Basic analytics dashboard</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Email support</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Standard question library</span>
+                            </div>
+                            <div class="pricing-feature disabled">
+                                <i class="bi bi-x-circle"></i>
+                                <span>Custom interview templates</span>
+                            </div>
+                            <div class="pricing-feature disabled">
+                                <i class="bi bi-x-circle"></i>
+                                <span>API access</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-green w-100">Get Started</button>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 rounded-3 shadow position-relative">
-                        <div class="badge bg-primary-green position-absolute top-0 start-50 translate-middle px-3 py-2 rounded-pill">MOST POPULAR</div>
-                        <div class="card-body text-center p-4 mt-3">
-                            <h5 class="text-primary-green fw-bold mb-3">Growth</h5>
-                            <h2 class="display-5 fw-bold mb-3">$999<small class="fs-6 text-secondary">/month</small></h2>
-                            <p class="text-secondary mb-4">Ideal for established companies hiring 5-15 positions monthly</p>
-                            <ul class="list-unstyled text-start mb-4">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-green me-2"></i>Up to 50 interviews/month</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-green me-2"></i>Advanced analytics & reporting</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-green me-2"></i>Priority email & chat support</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-green me-2"></i>Expanded question library</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-green me-2"></i>Custom interview templates</li>
-                                <li class="mb-2 text-muted"><i class="bi bi-x-circle me-2"></i>API access</li>
-                            </ul>
-                            <button class="btn btn-primary-green w-100">Get Started</button>
+                <div class="col-lg-4 mb-4">
+                    <div class="pricing-card p-4">
+                        <h3 class="pricing-title mb-4">Growth</h3>
+                        <div class="d-flex align-items-baseline mb-4">
+                            <span class="pricing-price">$999</span>
+                            <span class="pricing-duration">/month</span>
                         </div>
+                        <p class="text-secondary mb-4">Ideal for established companies hiring 5-15 positions monthly</p>
+                        <div class="pricing-features mb-4">
+                            <div class="pricing-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Up to 50 interviews/month</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Advanced analytics & reporting</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Priority email & chat support</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Expanded question library</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Custom interview templates</span>
+                            </div>
+                            <div class="pricing-feature disabled">
+                                <i class="bi bi-x-circle"></i>
+                                <span>API access</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary-green w-100">Get Started</button>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 rounded-3 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <h5 class="text-primary-green fw-bold mb-3">Enterprise</h5>
-                            <h2 class="display-5 fw-bold mb-3">Custom</h2>
-                            <p class="text-secondary mb-4">For large organizations with high-volume hiring needs</p>
-                            <ul class="list-unstyled text-start mb-4">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-green me-2"></i>Unlimited interviews</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-green me-2"></i>Full analytics & reporting suite</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-green me-2"></i>Dedicated success manager</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-green me-2"></i>Complete question library</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-green me-2"></i>Custom interview templates</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-green me-2"></i>API access & integrations</li>
-                            </ul>
-                            <button class="btn btn-outline-green w-100">Contact Sales</button>
+                <div class="col-lg-4 mb-4">
+                    <div class="pricing-card p-4">
+                        <h3 class="pricing-title mb-4">Enterprise</h3>
+                        <div class="d-flex align-items-baseline mb-4">
+                            <span class="pricing-price">Custom</span>
                         </div>
+                        <p class="text-secondary mb-4">For large organizations with high-volume hiring needs</p>
+                        <div class="pricing-features mb-4">
+                            <div class="pricing-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Unlimited interviews</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Full analytics & reporting suite</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>24/7 priority support</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Complete question library</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Custom interview templates</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>API access & integrations</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-green w-100">Contact Sales</button>
                     </div>
                 </div>
             </div>
@@ -556,6 +614,9 @@
         </div>
     </footer>
 
+    <div>
+    <!-- Theme Script - Load before other scripts -->
+    <script src="js/theme.js"></script>
     <!-- Bootstrap and custom JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="js/landing.js"></script>
