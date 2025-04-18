@@ -131,6 +131,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
+                    <button class="btn btn-outline-primary mb-3 d-md-none w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#jobFiltersOffcanvas" aria-controls="jobFiltersOffcanvas">
+                        <i class="bi bi-funnel-fill me-2"></i>Show Filters
+                    </button>
                     <!-- Filters Section -->
                     <div class="filters-card">
                         <h5>Filter Jobs</h5>
@@ -429,7 +432,123 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+   
+    <!-- Job Filters Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="jobFiltersOffcanvas" aria-labelledby="jobFiltersOffcanvasLabel">
+    <div class="offcanvas-header bg-light-green">
+      <h5 class="offcanvas-title text-primary-green" id="jobFiltersOffcanvasLabel">Filter Jobs</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="filter-group mb-4">
+        <h6 class="mb-3 fw-bold">Experience Level</h6>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="entryLevelFilter">
+          <label class="form-check-label" for="entryLevelFilter">Entry Level</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="midLevelFilter">
+          <label class="form-check-label" for="midLevelFilter">Mid Level</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="seniorLevelFilter">
+          <label class="form-check-label" for="seniorLevelFilter">Senior Level</label>
+        </div>
+      </div>
+      
+      <div class="filter-group mb-4">
+        <h6 class="mb-3 fw-bold">Job Type</h6>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="fullTimeFilter">
+          <label class="form-check-label" for="fullTimeFilter">Full-time</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="partTimeFilter">
+          <label class="form-check-label" for="partTimeFilter">Part-time</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="contractFilter">
+          <label class="form-check-label" for="contractFilter">Contract</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="internshipFilter">
+          <label class="form-check-label" for="internshipFilter">Internship</label>
+        </div>
+      </div>
+      
+      <div class="filter-group mb-4">
+        <h6 class="mb-3 fw-bold">Location</h6>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="remoteFilter">
+          <label class="form-check-label" for="remoteFilter">Remote</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="hybridFilter">
+          <label class="form-check-label" for="hybridFilter">Hybrid</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="onsiteFilter">
+          <label class="form-check-label" for="onsiteFilter">On-site</label>
+        </div>
+      </div>
+      
+      <div class="filter-group mb-4">
+        <h6 class="mb-3 fw-bold">Salary Range</h6>
+        <label for="salaryRange" class="form-label">Minimum $<span id="salaryRangeValue">50,000</span></label>
+        <input type="range" class="form-range mb-3" min="30000" max="200000" step="5000" value="50000" id="salaryRange">
+        
+        <div class="d-flex justify-content-between small text-muted">
+          <span>$30k</span>
+          <span>$100k</span>
+          <span>$200k+</span>
+        </div>
+      </div>
+      
+      <div class="filter-group mb-4">
+        <h6 class="mb-3 fw-bold">Interview Rounds</h6>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="dsaRoundFilter">
+          <label class="form-check-label" for="dsaRoundFilter">DSA Round</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="techStackRoundFilter">
+          <label class="form-check-label" for="techStackRoundFilter">Tech Stack Round</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="behavioralRoundFilter">
+          <label class="form-check-label" for="behavioralRoundFilter">Behavioral Round</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="systemDesignRoundFilter">
+          <label class="form-check-label" for="systemDesignRoundFilter">System Design Round</label>
+        </div>
+      </div>
+      
+      <div class="d-grid gap-2">
+        <button class="btn btn-primary-green" type="button">Apply Filters</button>
+        <button class="btn btn-outline-secondary" type="button">Reset All</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Button to trigger the offcanvas -->
+
+  <!-- Script for salary range slider -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const salaryRange = document.getElementById('salaryRange');
+      const salaryRangeValue = document.getElementById('salaryRangeValue');
+      
+      if (salaryRange && salaryRangeValue) {
+        // Update the displayed value when slider moves
+        salaryRange.addEventListener('input', function() {
+          // Format the number with commas
+          salaryRangeValue.textContent = new Intl.NumberFormat().format(this.value);
+        });
+      }
+    });
+  </script>
+   <!-- Scripts -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

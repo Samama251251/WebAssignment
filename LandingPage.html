@@ -58,25 +58,64 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-light-green py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll" data-animation="fade-in-right">
-                    <h1 class="display-4 fw-bold mb-3">AI-Powered Tech Interviews.<br>No Human Bias.</h1>
-                    <p class="lead text-secondary mb-4">InterviewAI automates the entire tech interview process, saving time for companies and providing fair evaluations for candidates.</p>
-                    <div>
-                        <button class="btn btn-primary-green btn-lg me-2 mb-2">Hire Top Talent</button>
-                        <button class="btn btn-outline-green btn-lg mb-2">Find Your Next Role</button>
-                    </div>
+   
+<section class="bg-light-green py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll" data-animation="fade-in-right">
+                <h1 class="display-4 fw-bold mb-3">AI-Powered Tech Interviews.<br>No Human Bias.</h1>
+                <p class="lead text-secondary mb-4">InterviewAI automates the entire tech interview process, saving time for companies and providing fair evaluations for candidates.</p>
+                <div>
+                    <button class="btn btn-primary-green btn-lg me-2 mb-2">Hire Top Talent</button>
+                    <button class="btn btn-outline-green btn-lg mb-2">Find Your Next Role</button>
                 </div>
-                <div class="col-lg-6 text-center animate-on-scroll" data-animation="fade-in-left">
-                    <div class="img-hover-zoom">
-                        <img src="images/photo1.png" alt="InterviewAI Platform" class="img-fluid rounded hero-img">
+            </div>
+            <div class="col-lg-6 text-center animate-on-scroll" data-animation="fade-in-left">
+                <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
+                    <div class="carousel-inner rounded shadow">
+                        <div class="carousel-item active">
+                            <div class="img-hover-zoom">
+                                <img src="images/photo1.png" alt="InterviewAI Platform" class="d-block w-100 rounded hero-img">
+                            </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="bg-dark bg-opacity-50 p-2 rounded">Streamlined Interviews</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="img-hover-zoom">
+                                <img src="images/photo2.png" alt="Tech candidate using InterviewAI" class="d-block w-100 rounded hero-img">
+                            </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="bg-dark bg-opacity-50 p-2 rounded">Fair Evaluation</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="img-hover-zoom">
+                                <img src="images/photo3.png" alt="Company using InterviewAI" class="d-block w-100 rounded hero-img">
+                            </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="bg-dark bg-opacity-50 p-2 rounded">Data-Driven Hiring</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- How It Works Section -->
     <section class="py-5" id="how-it-works">
@@ -141,7 +180,23 @@
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-3">
                                 <i class="bi bi-clock feature-icon"></i>
-                                <h5 class="card-title mb-0">Save 80% of Hiring Time</h5>
+                                <h5 class="card-title mb-0">Save 80% of Hiring Time
+                                    <button type="button" class="btn btn-sm text-primary-green p-0 ms-1 border-0" 
+                data-bs-toggle="popover" 
+                data-bs-placement="top" 
+                title="Time-Saving AI Interviews" 
+                data-bs-content="
+                  <p>InterviewAI reduces the average hiring process from 45 days to just 9 days by:</p>
+                  <ul class='small'>
+                    <li>Automating candidate screening</li>
+                    <li>Conducting interviews 24/7</li>
+                    <li>Providing instant candidate evaluations</li>
+                    <li>Eliminating interview scheduling conflicts</li>
+                  </ul>
+                ">
+            <i class="bi bi-info-circle"></i>
+        </button>
+                                </h5>
                             </div>
                             <p class="card-text text-secondary">Automate screening and interviewing to focus only on the best-matched candidates.</p>
                         </div>
@@ -152,7 +207,24 @@
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-3">
                                 <i class="bi bi-robot feature-icon"></i>
-                                <h5 class="card-title mb-0">Unbiased Evaluations</h5>
+                                <h5 class="card-title mb-0">Unbiased Evaluations
+                                    <button type="button" class="btn btn-sm text-primary-green p-0 ms-1 border-0" 
+            data-bs-toggle="popover" 
+            data-bs-placement="top" 
+            title="AI-Powered Bias Elimination" 
+            data-bs-content="
+              <p>Our system eliminates unconscious bias through:</p>
+              <ul class='small'>
+                <li>Standardized questions for all candidates</li>
+                <li>Blind evaluation of coding challenges</li>
+                <li>Consistent scoring metrics</li>
+                <li>Removing demographic factors from decision-making</li>
+              </ul>
+              <p class='small mt-2'>Companies using InterviewAI report 45% more diverse hiring outcomes.</p>
+            ">
+      <i class="bi bi-info-circle"></i>
+    </button>
+                                </h5>
                             </div>
                             <p class="card-text text-secondary">Our AI evaluates candidates purely on merit, eliminating unconscious bias from the process.</p>
                         </div>
@@ -619,11 +691,37 @@
     </footer>
 
     <div>
+        <button id="scrollToTopBtn" class="btn btn-primary-green rounded-circle position-fixed d-none" style="bottom: 30px; right: 30px; width: 50px; height: 50px; z-index: 1000;">
+            <i class="bi bi-arrow-up"></i>
+        </button>
     <!-- Theme Script - Load before other scripts -->
     <script src="js/theme.js"></script>
     <!-- Bootstrap and custom JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="js/landing.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/Scroll-to-top.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Initialize all popovers
+          const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+          const popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl, {
+              trigger: 'click',
+              html: true,
+              container: 'body'
+            });
+          });
+          
+          // Close popovers when clicking outside
+          document.addEventListener('click', function(e) {
+            if (!e.target.hasAttribute('data-bs-toggle') || e.target.getAttribute('data-bs-toggle') !== 'popover') {
+              popoverList.forEach(function(popover) {
+                popover.hide();
+              });
+            }
+          });
+        });
+        </script>
 </body>
 </html>

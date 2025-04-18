@@ -39,14 +39,19 @@
                                 <div class="tab-pane fade show active" id="login" role="tabpanel">
                                     <form id="loginForm" novalidate>
                                         <div class="mb-3">
-                                            <label for="loginEmail" class="form-label">Email address</label>
+                                            <label for="loginEmail" class="form-label">Email address
+                                                
+                                            </label>
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
                                                 <input type="email" class="form-control" id="loginEmail" required>
                                             </div>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="loginPassword" class="form-label">Password</label>
+                                            <label for="loginPassword" class="form-label">Password
+                                                <i class="bi bi-info-circle text-muted ms-1" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                     title="Password must be at least 8 characters with uppercase, lowercase and number"></i>
+                                            </label>
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="bi bi-lock"></i></span>
                                                 <input type="password" class="form-control" id="loginPassword" required>
@@ -142,5 +147,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="../js/theme.js"></script>
     <script src="../js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Initialize all tooltips
+          const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+          const tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl, {
+              trigger: 'hover focus',
+              boundary: 'window'
+            });
+          });
+        });
+        </script>
 </body>
 </html>
