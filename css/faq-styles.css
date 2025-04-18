@@ -1,0 +1,229 @@
+/* FAQ Section Styles */
+:root {
+    --primary-green: #14a800;
+    --secondary-green: #0e8f0d;
+    --light-green: #e4f7e3;
+    --dark-green: #0a6b09;
+    --text-dark: #222222;
+    --text-secondary: #666666;
+}
+
+/* FAQ Container */
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Search Box */
+.faq-search-container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.faq-search-container input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    padding-left: 3rem;
+}
+
+.faq-search-container input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(20, 168, 0, 0.2);
+    border-color: var(--primary-green);
+}
+
+.faq-search-container::before {
+    content: "\F52A";
+    font-family: "bootstrap-icons";
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+/* FAQ Items */
+.faq-item {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    background-color: white;
+    position: relative;
+}
+
+.faq-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active::before,
+.faq-item:hover::before {
+    background-color: var(--primary-green);
+}
+
+.faq-item.active {
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.faq-item.hover:not(.active) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+}
+
+/* FAQ Header */
+.faq-header {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.faq-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.faq-item.active .faq-header h3 {
+    color: var(--primary-green);
+}
+
+.faq-header-icon {
+    color: var(--primary-green);
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+.faq-item.active .faq-header-icon {
+    transform: rotate(180deg);
+}
+
+/* FAQ Content */
+.faq-content {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.faq-item.active .faq-content {
+    padding-bottom: 1.5rem;
+}
+
+.faq-content p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* FAQ Categories */
+.faq-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.faq-category {
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    margin: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.faq-category:hover,
+.faq-category.active {
+    background-color: var(--primary-green);
+    color: white;
+    border-color: var(--primary-green);
+}
+
+/* FAQ Empty State */
+.faq-empty {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin-top: 1rem;
+    display: none; /* Hidden by default */
+}
+
+.faq-empty i {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .faq-header h3 {
+        font-size: 1rem;
+    }
+    
+    .faq-header {
+        padding: 1.25rem;
+    }
+    
+    .faq-categories {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 0.5rem;
+    }
+    
+    .faq-category {
+        white-space: nowrap;
+        flex: 0 0 auto;
+    }
+}
+
+/* Animation for new FAQ items */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.faq-item {
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: calc(var(--animation-order) * 0.1s);
+    opacity: 0;
+}
+
+/* Highlighted text in search results */
+.highlight {
+    background-color: rgba(20, 168, 0, 0.2);
+    font-weight: 500;
+    padding: 0 2px;
+    border-radius: 2px;
+} 

@@ -34,7 +34,7 @@
 
                             <div class="tab-content" id="authTabsContent">
                                 <div class="tab-pane fade show active" id="login" role="tabpanel">
-                                    <form id="loginForm">
+                                    <form id="loginForm" novalidate>
                                         <div class="mb-3">
                                             <label for="loginEmail" class="form-label">Email address</label>
                                             <div class="input-group">
@@ -53,7 +53,7 @@
                                             <input type="checkbox" class="form-check-input" id="rememberMe">
                                             <label class="form-check-label" for="rememberMe">Remember me</label>
                                         </div>
-                                        <a href="AdminDashboard.html" class="btn btn-primary-green w-100 mb-3">Login</a>
+                                        <button type="submit" class="btn btn-primary-green w-100 mb-3">Login</button>
                                         <div class="text-center">
                                             <a href="#" class="text-decoration-none">Forgot password?</a>
                                         </div>
@@ -61,7 +61,7 @@
                                 </div>
 
                                 <div class="tab-pane fade" id="signup" role="tabpanel">
-                                    <form id="signupForm">
+                                    <form id="signupForm" novalidate>
                                         <div class="mb-3">
                                             <label for="signupName" class="form-label">Full Name</label>
                                             <div class="input-group">
@@ -80,7 +80,10 @@
                                             <label for="signupPassword" class="form-label">Password</label>
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="bi bi-lock"></i></span>
-                                                <input type="password" class="form-control" id="signupPassword" required>
+                                                <input type="password" class="form-control" id="signupPassword" 
+                                                    required 
+                                                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+                                                    title="Password must be at least 8 characters with uppercase, lowercase and number">
                                             </div>
                                         </div>
                                         <div class="mb-3">
@@ -92,9 +95,9 @@
                                         </div>
                                         <div class="mb-3 form-check">
                                             <input type="checkbox" class="form-check-input" id="termsCheck" required>
-                                            <label class="form-check-label" for="termsCheck">I agree to the Terms and Conditions</label>
+                                            <label class="form-check-label" for="termsCheck">I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms and Conditions</a></label>
                                         </div>
-                                        <a href="client_posting.html" class="btn btn-primary-green w-100">Sign Up</a>
+                                        <button type="submit" class="btn btn-primary-green w-100">Sign Up</button>
                                     </form>
                                 </div>
                             </div>
@@ -104,6 +107,36 @@
             </div>
         </div>
     </section>
+
+    <!-- Terms and Conditions Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>1. Acceptance of Terms</h6>
+                    <p>By accessing and using InterviewAI, you accept and agree to be bound by the terms and provisions of this agreement.</p>
+                    
+                    <h6>2. User Account</h6>
+                    <p>When you create an account with us, you must provide accurate and complete information. You are solely responsible for the activity that occurs on your account.</p>
+                    
+                    <h6>3. Privacy Policy</h6>
+                    <p>Your use of InterviewAI is also governed by our Privacy Policy, which is incorporated into these terms by reference.</p>
+                    
+                    <h6>4. Intellectual Property</h6>
+                    <p>The InterviewAI service and its original content, features, and functionality are owned by InterviewAI Inc. and are protected by copyright, trademark, and other intellectual property laws.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary-green" data-bs-dismiss="modal">I Agree</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/auth.js"></script>
 </body>
 </html>
