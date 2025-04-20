@@ -35,10 +35,10 @@
                         </button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="auth.html">
+                        <button class="btn nav-link" data-bs-toggle="modal" data-bs-target="#profileModal">
                             <i class="fas fa-user-circle me-1"></i>
                             Profile
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -178,7 +178,7 @@
                                 <button class="btn btn-outline-primary btn-sm">
                                     <i class="fas fa-video me-2"></i>Join Interview
                                 </button>
-                                <button class="btn btn-outline-secondary btn-sm">
+                                <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#detailsModal">
                                     <i class="fas fa-file-alt me-2"></i>View Details
                                 </button>
                             </div>
@@ -200,7 +200,7 @@
                                 <button class="btn btn-outline-primary btn-sm">
                                     <i class="fas fa-video me-2"></i>Join Interview
                                 </button>
-                                <button class="btn btn-outline-secondary btn-sm">
+                                <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#detailsModal">
                                     <i class="fas fa-file-alt me-2"></i>View Details
                                 </button>
                             </div>
@@ -230,7 +230,7 @@
                                 <span><i class="fas fa-star me-2"></i>Score: 92%</span>
                             </div>
                             <div class="interview-actions mt-3">
-                                <button class="btn btn-outline-success btn-sm">
+                                <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#reportModal">
                                     <i class="fas fa-file-alt me-2"></i>View Report
                                 </button>
                             </div>
@@ -249,7 +249,7 @@
                                 <span><i class="fas fa-star me-2"></i>Score: 88%</span>
                             </div>
                             <div class="interview-actions mt-3">
-                                <button class="btn btn-outline-success btn-sm">
+                                <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#reportModal">
                                     <i class="fas fa-file-alt me-2"></i>View Report
                                 </button>
                             </div>
@@ -268,7 +268,7 @@
                                 <span><i class="fas fa-star me-2"></i>Score: 95%</span>
                             </div>
                             <div class="interview-actions mt-3">
-                                <button class="btn btn-outline-success btn-sm">
+                                <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#reportModal">
                                     <i class="fas fa-file-alt me-2"></i>View Report
                                 </button>
                             </div>
@@ -287,7 +287,7 @@
                                 <span><i class="fas fa-star me-2"></i>Score: 85%</span>
                             </div>
                             <div class="interview-actions mt-3">
-                                <button class="btn btn-outline-success btn-sm">
+                                <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#reportModal">
                                     <i class="fas fa-file-alt me-2"></i>View Report
                                 </button>
                             </div>
@@ -347,6 +347,296 @@
             </div>
         </div>
     </div>
+
+
+
+<!-- Profile Modal -->
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profileModalLabel">User Profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center mb-4">
+                    <img src="https://via.placeholder.com/120" alt="Profile Picture" class="rounded-circle img-thumbnail mb-3">
+                    <h4>John Doe</h4>
+                    <p class="text-muted">Software Developer</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <h6>Email</h6>
+                        <p>john.doe@example.com</p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h6>Phone</h6>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h6>Location</h6>
+                        <p>San Francisco, CA</p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h6>Experience</h6>
+                        <p>5+ Years</p>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <h6>Skills</h6>
+                    <div>
+                        <span class="badge bg-primary me-1 mb-1">JavaScript</span>
+                        <span class="badge bg-primary me-1 mb-1">React</span>
+                        <span class="badge bg-primary me-1 mb-1">Node.js</span>
+                        <span class="badge bg-primary me-1 mb-1">Python</span>
+                        <span class="badge bg-primary me-1 mb-1">SQL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Edit Profile</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Report Modal -->
+<div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reportModalLabel">Interview Performance Report</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="report-header mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <h4>Frontend Developer Interview</h4>
+                            <p class="mb-1"><strong>Company:</strong> Creative Designs Co.</p>
+                            <p class="mb-1"><strong>Date:</strong> Apr 1, 2025</p>
+                            <p class="mb-0"><strong>Duration:</strong> 45 mins</p>
+                        </div>
+                        <div class="col-md-4 text-md-end">
+                            <div class="score-badge">
+                                <h3 class="mb-0">92%</h3>
+                                <p class="mb-0">Overall Score</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="report-section mb-4">
+                    <h5>Score Breakdown</h5>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <div class="score-card text-center p-3 border rounded">
+                                <h6>Technical Skills</h6>
+                                <h4>95%</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="score-card text-center p-3 border rounded">
+                                <h6>Problem Solving</h6>
+                                <h4>88%</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="score-card text-center p-3 border rounded">
+                                <h6>Communication</h6>
+                                <h4>90%</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="score-card text-center p-3 border rounded">
+                                <h6>Cultural Fit</h6>
+                                <h4>94%</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="report-section mb-4">
+                    <h5>Technical Assessment</h5>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Skill</th>
+                                    <th>Rating</th>
+                                    <th>Comments</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>JavaScript</td>
+                                    <td>Excellent</td>
+                                    <td>Strong understanding of core concepts and modern ES6+ features.</td>
+                                </tr>
+                                <tr>
+                                    <td>React</td>
+                                    <td>Very Good</td>
+                                    <td>Proficient with hooks and state management.</td>
+                                </tr>
+                                <tr>
+                                    <td>CSS/SCSS</td>
+                                    <td>Excellent</td>
+                                    <td>Advanced skills in responsive design and animations.</td>
+                                </tr>
+                                <tr>
+                                    <td>Performance Optimization</td>
+                                    <td>Good</td>
+                                    <td>Familiar with core concepts but could improve on implementation.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="report-section mb-4">
+                    <h5>Strengths</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Excellent problem-solving approach with clear step-by-step reasoning</li>
+                        <li class="list-group-item">Strong knowledge of frontend optimization techniques</li>
+                        <li class="list-group-item">Clear and concise communication style</li>
+                        <li class="list-group-item">Good understanding of design principles and UX considerations</li>
+                    </ul>
+                </div>
+                
+                <div class="report-section mb-4">
+                    <h5>Areas for Improvement</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Could improve knowledge of testing frameworks</li>
+                        <li class="list-group-item">Would benefit from more experience with large-scale applications</li>
+                    </ul>
+                </div>
+                
+                <div class="report-section">
+                    <h5>Interview Recording</h5>
+                    <div class="text-center p-4 bg-light rounded">
+                        <i class="fas fa-video fs-2 mb-3"></i>
+                        <p>Recording available for review</p>
+                        <button class="btn btn-outline-primary">Watch Recording</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Download PDF</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Interview Details Modal -->
+<div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="detailsModalLabel">Interview Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="interview-header mb-4 pb-3 border-bottom">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4 class="mb-2">Senior Software Developer</h4>
+                            <p class="mb-1 text-primary"><strong>Tech Innovations Inc.</strong></p>
+                            <p class="mb-3 text-muted">Full-time · Remote · $120K - $150K</p>
+                            
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="badge bg-primary me-2">Upcoming</span>
+                                <span class="text-muted"><i class="fas fa-calendar me-2"></i>Apr 12, 2025 - 10:00 AM</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-end">
+                            <img src="https://via.placeholder.com/80" alt="Company Logo" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mb-4">
+                    <div class="col-md-6 mb-3">
+                        <h6><i class="fas fa-clock me-2"></i>Duration</h6>
+                        <p>60 minutes</p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h6><i class="fas fa-code me-2"></i>Interview Type</h6>
+                        <p>Technical Round</p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h6><i class="fas fa-map-marker-alt me-2"></i>Location</h6>
+                        <p>Remote (Zoom)</p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h6><i class="fas fa-user me-2"></i>Interviewer</h6>
+                        <p>Sarah Johnson (Engineering Manager)</p>
+                    </div>
+                </div>
+                
+                <div class="interview-section mb-4">
+                    <h5 class="mb-3"><i class="fas fa-info-circle me-2"></i>Interview Information</h5>
+                    <div class="card">
+                        <div class="card-body">
+                            <p>This technical interview will focus on your experience with backend technologies and system design. Be prepared to discuss your past projects and solve coding problems related to distributed systems and microservices.</p>
+                            
+                            <h6 class="mt-3 mb-2">What to prepare:</h6>
+                            <ul>
+                                <li>Design patterns and system architecture</li>
+                                <li>Microservices communication strategies</li>
+                                <li>High-availability and scaling solutions</li>
+                                <li>Coding in Java/Python (your choice)</li>
+                            </ul>
+                            
+                            <h6 class="mt-3 mb-2">What to bring:</h6>
+                            <ul>
+                                <li>Photo ID</li>
+                                <li>Copy of your resume</li>
+                                <li>Portfolio or code samples (optional)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interview-section mb-4">
+                    <h5 class="mb-3"><i class="fas fa-laptop-code me-2"></i>Technical Requirements</h5>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="mb-0">
+                                <li>Stable internet connection</li>
+                                <li>Quiet environment with minimal background noise</li>
+                                <li>Webcam and microphone</li>
+                                <li>IDE or code editor of your choice</li>
+                                <li>Zoom installed and tested beforehand</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interview-section">
+                    <h5 class="mb-3"><i class="fas fa-building me-2"></i>About the Company</h5>
+                    <div class="card">
+                        <div class="card-body">
+                            <p>Tech Innovations Inc. is a leading software development company specializing in cloud-native solutions and enterprise applications. Founded in 2015, the company has grown to over 500 employees across 5 global offices.</p>
+                            <p class="mb-0">The company culture emphasizes innovation, continuous learning, and work-life balance. They offer competitive benefits including flexible working hours, professional development stipends, and comprehensive healthcare.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Add to Calendar</button>
+                <button type="button" class="btn btn-primary">Prepare for Interview</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <!-- Footer -->
     <footer class="footer mt-5">
