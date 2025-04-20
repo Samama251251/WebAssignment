@@ -21,7 +21,7 @@
 ---
 
 ## Live Demo  
-**View Live Demo** (Replace with your actual deployment URL)
+**View Live Demo** https://samama251251.github.io/WebAssignment
 
 ---
 
