@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Application Portal</title>
+    <title>My Interviews - InterviewAI</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/client_posting_style.css">
 </head>
 <body>
-    <!-- Top  -->
+    <!-- Top Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
         <div class="container">
             <a class="navbar-brand mx-auto" href="../LandingPage.html">
-                <span class="brand-text">GenAI Interview</span>
+                <span class="brand-text">InterviewAI</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -23,108 +24,124 @@
                         <a class="nav-link" href="../LandingPage.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="client_posting.html">Jobs</a>
+                        <a class="nav-link active" href="client_posting.html">My Interviews</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="AdminDashboard.html">Admin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="auth.html">Login/Signup</a>
+                        <button id="themeToggle" class="btn btn-outline-light me-2" aria-label="Toggle theme">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="auth.html">
+                            <i class="fas fa-user-circle me-1"></i>
+                            Profile
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- welcome -->
-     <div class="welcome">
+    <!-- Welcome Section -->
+    <div class="welcome-section py-4">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md-12">
-                    <h2 class="welcome-message">
+                    <h2 class="welcome-message mb-2">
                         <i class="fas fa-user-circle me-2"></i>
-                        Welcome, User!
+                        Welcome back, John Doe!
                     </h2>
-                    <p class="text-muted">Find your job and let AI automate the interview!</p>
+                    <p class="text-muted mb-0">Track your interview progress and prepare for upcoming sessions.</p>
                 </div>
             </div>
         </div>
-     </div>
+    </div>
     
-    <!-- Upcoming Interviews Section -->
-    <section class="upcoming-section">
+    <!-- Practice Tests Section -->
+    <section class="practice-tests py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="info-card">
-                        <div class="card-header">
-                            <h5><i class="fas fa-calendar-check me-2"></i>Upcoming Interviews</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="interview-item">
-                                <h6>Data Scientist</h6>
-                                <p>Tech Innovations Inc.</p>
-                                <span class="badge bg-success">AI Interview - Apr 12, 2025</span>
-                            </div>
-                            <div class="interview-item">
-                                <h6>UX Designer</h6>
-                                <p>Creative Designs Co.</p>
-                                <span class="badge bg-primary">Technical Round - Apr 15, 2025</span>
-                            </div>
-                        </div>
+            <h3 class="section-title mb-4">
+                <i class="fas fa-laptop-code me-2"></i>
+                Practice Test
+            </h3>
+            <div class="practice-cards">
+                <!-- DSA Practice Card -->
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-code"></i>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="info-card">
-                        <div class="card-header">
-                            <h5><i class="fas fa-briefcase me-2"></i>Upcoming Jobs</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="job-item">
-                                <h6>ML Engineer</h6>
-                                <p>Data Analytics Pro</p>
-                                <p><i class="fas fa-map-marker-alt me-1"></i> Remote | <i class="fas fa-dollar-sign me-1"></i> $110k-$140k</p>
-                            </div>
-                            <div class="job-item">
-                                <h6>Frontend Developer</h6>
-                                <p>Global Solutions Ltd.</p>
-                                <p><i class="fas fa-map-marker-alt me-1"></i> New York | <i class="fas fa-dollar-sign me-1"></i> $90k-$120k</p>
-                            </div>
-                        </div>
+                    <h4>Data Structures & Algorithms</h4>
+                    <div class="practice-details">
+                        <span><i class="fas fa-clock me-2"></i>60 minutes</span>
+                        <span><i class="fas fa-question-circle me-2"></i>20 Questions</span>
                     </div>
+                    <div class="practice-topics">
+                        <span class="badge bg-light text-dark">Arrays</span>
+                        <span class="badge bg-light text-dark">Trees</span>
+                        <span class="badge bg-light text-dark">Graphs</span>
+                    </div>
+                    <button class="btn btn-primary w-100" onclick="startTest('dsa')">
+                        <i class="fas fa-play me-2"></i>Start Test
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Search Section -->
-    <section class="search-section">
+    <!-- Interview Dashboard -->
+    <section class="interview-dashboard py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 class="search-title">Search Companies</h3>
-                    <div class="row g-3">
-                        <div class="col-md-5">
-                            <input type="text" class="form-control" placeholder="Job title or keywords">
+            <!-- Stats Overview -->
+            <div class="row mb-5">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-primary-light">
+                            <i class="fas fa-calendar-check"></i>
                         </div>
-                        <div class="col-md-4">
-                            <select class="form-select" id="companySelect">
-                                <option selected disabled>Select a company</option>
-                                <option value="company1">Tech Innovations Inc.</option>
-                                <option value="company2">Global Solutions Ltd.</option>
-                                <option value="company3">Future Technologies</option>
-                                <option value="company4">Creative Designs Co.</option>
-                                <option value="company5">Data Analytics Pro</option>
-                            </select>
+                        <div class="stat-content">
+                            <h3>6</h3>
+                            <p>Total Interviews</p>
                         </div>
-                        <div class="col-md-3">
-                            <button class="btn btn-primary w-100">Search Jobs</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-success-light">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>4</h3>
+                            <p>Completed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-warning-light">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>2</h3>
+                            <p>Upcoming</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-info-light">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>85%</h3>
+                            <p>Success Rate</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+
 
     <!-- Job Listing Section -->
     <section class="job-listing">
@@ -142,295 +159,216 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="entryLevel">
                                 <label class="form-check-label" for="entryLevel">Entry Level</label>
+            <!-- Upcoming Interviews -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="section-title mb-4">
+                        <i class="fas fa-calendar me-2"></i>
+                        Upcoming Interviews
+                    </h3>
+                    <div class="interview-cards">
+                        <div class="interview-card upcoming">
+                            <div class="interview-status">
+                                <span class="badge bg-primary">Upcoming</span>
+                                <span class="interview-date">Apr 12, 2025 - 10:00 AM</span>
+
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="midLevel">
-                                <label class="form-check-label" for="midLevel">Mid Level</label>
+                            <h4>Senior Software Developer</h4>
+                            <p class="company-name">Tech Innovations Inc.</p>
+                            <div class="interview-details">
+                                <span><i class="fas fa-map-marker-alt me-2"></i>Remote</span>
+                                <span><i class="fas fa-clock me-2"></i>60 mins</span>
+                                <span><i class="fas fa-code me-2"></i>Technical Round</span>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="seniorLevel">
-                                <label class="form-check-label" for="seniorLevel">Senior Level</label>
-                            </div>
-                        </div>
-                        
-                        <div class="filter-group">
-                            <h6>Job Type</h6>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="fullTime">
-                                <label class="form-check-label" for="fullTime">Full-time</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="partTime">
-                                <label class="form-check-label" for="partTime">Part-time</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="contract">
-                                <label class="form-check-label" for="contract">Contract</label>
-                            </div>
-                        </div>
-                        
-                        <div class="filter-group">
-                            <h6>Salary Range</h6>
-                            <div class="mb-3">
-                                <label for="minSalary" class="form-label">Minimum</label>
-                                <select class="form-select" id="minSalary">
-                                    <option value="30000">$30,000</option>
-                                    <option value="50000">$50,000</option>
-                                    <option value="75000">$75,000</option>
-                                    <option value="100000">$100,000</option>
-                                    <option value="125000">$125,000</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="maxSalary" class="form-label">Maximum</label>
-                                <select class="form-select" id="maxSalary">
-                                    <option value="50000">$50,000</option>
-                                    <option value="75000">$75,000</option>
-                                    <option value="100000">$100,000</option>
-                                    <option value="150000" selected>$150,000</option>
-                                    <option value="200000">$200,000+</option>
-                                </select>
+                            <div class="interview-actions mt-3">
+                                <button class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-video me-2"></i>Join Interview
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm">
+                                    <i class="fas fa-file-alt me-2"></i>View Details
+                                </button>
                             </div>
                         </div>
-                        
-                        <button class="btn btn-primary w-100 mt-3">Apply Filters</button>
+
+                        <div class="interview-card upcoming">
+                            <div class="interview-status">
+                                <span class="badge bg-primary">Upcoming</span>
+                                <span class="interview-date">Apr 15, 2025 - 2:00 PM</span>
+                            </div>
+                            <h4>Full Stack Developer</h4>
+                            <p class="company-name">Global Solutions Ltd.</p>
+                            <div class="interview-details">
+                                <span><i class="fas fa-map-marker-alt me-2"></i>Remote</span>
+                                <span><i class="fas fa-clock me-2"></i>45 mins</span>
+                                <span><i class="fas fa-code me-2"></i>Coding Challenge</span>
+                            </div>
+                            <div class="interview-actions mt-3">
+                                <button class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-video me-2"></i>Join Interview
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm">
+                                    <i class="fas fa-file-alt me-2"></i>View Details
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="col-md-8">
-                    <!-- Jobs List -->
-                    <div class="job-card">
-                        <div class="job-header">
-                            <h4>Senior Software Developer</h4>
-                            <p class="mb-0">Tech Innovations Inc.</p>
-                        </div>
-                        <div class="job-content">
-                            <div class="row mb-3">
-                                <div class="col-md-4">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-map-marker-alt text-muted me-2"></i>
-                                        <span>San Francisco, CA</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-clock text-muted me-2"></i>
-                                        <span>Full-time</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-dollar-sign text-muted me-2"></i>
-                                        <span>$120,000 - $150,000</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <p>
-                                We are seeking an experienced Senior Software Developer to join our dynamic team. The ideal candidate will have a strong background in full-stack development, with expertise in JavaScript, React, and Node.js.
-                            </p>
-                            <div class="job-tags mb-3">
-                                <span class="badge bg-light text-dark">JavaScript</span>
-                                <span class="badge bg-light text-dark">React</span>
-                                <span class="badge bg-light text-dark">Node.js</span>
-                            </div>
-                            <div class="interview-process">
-                                <h6>Interview Process:</h6>
-                                <div class="d-flex justify-content-between">
-                                    <div class="process-step active">Application Review</div>
-                                    <div class="process-step">AI-Based DSA Assessment</div>
-                                    <div class="process-step">Technical Interview</div>
-                                    <div class="process-step">Final Decision</div>
-                                </div>
-                            </div>
-                            <div class="d-flex mt-3">
-                                <button class="btn btn-primary me-2">View Details</button>
-                                <button class="btn btn-outline-primary">Apply Now</button>
-                            </div>
-                        </div>
-                    </div>
+            </div>
 
-                    <div class="job-card">
-                        <div class="job-header">
-                            <h4>Data Scientist</h4>
-                            <p class="mb-0">Data Analytics Pro</p>
-                        </div>
-                        <div class="job-content">
-                            <div class="row mb-3">
-                                <div class="col-md-4">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-map-marker-alt text-muted me-2"></i>
-                                        <span>New York, NY</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-clock text-muted me-2"></i>
-                                        <span>Full-time</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-dollar-sign text-muted me-2"></i>
-                                        <span>$110,000 - $140,000</span>
-                                    </div>
-                                </div>
+            <!-- Past Interviews -->
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="section-title mb-4">
+                        <i class="fas fa-history me-2"></i>
+                        Past Interviews
+                    </h3>
+                    <div class="interview-cards">
+                        <div class="interview-card completed">
+                            <div class="interview-status">
+                                <span class="badge bg-success">Completed</span>
+                                <span class="interview-date">Apr 1, 2025</span>
                             </div>
-                            <p>
-                                We're looking for a Data Scientist to help us leverage big data to drive business decisions. The ideal candidate will have experience with machine learning and Python.
-                            </p>
-                            <div class="job-tags mb-3">
-                                <span class="badge bg-light text-dark">Python</span>
-                                <span class="badge bg-light text-dark">Machine Learning</span>
-                                <span class="badge bg-light text-dark">SQL</span>
-                                <span class="badge bg-light text-dark">TensorFlow</span>
+                            <h4>Frontend Developer</h4>
+                            <p class="company-name">Creative Designs Co.</p>
+                            <div class="interview-details">
+                                <span><i class="fas fa-map-marker-alt me-2"></i>Remote</span>
+                                <span><i class="fas fa-clock me-2"></i>45 mins</span>
+                                <span><i class="fas fa-star me-2"></i>Score: 92%</span>
                             </div>
-                            <div class="interview-process">
-                                <h6>Interview Process:</h6>
-                                <div class="d-flex justify-content-between">
-                                    <div class="process-step active">Resume Screening</div>
-                                    <div class="process-step">AI Technical Assessment</div>
-                                    <div class="process-step">Case Study Interview</div>
-                                    <div class="process-step">Team Interview</div>
-                                </div>
-                            </div>
-                            <div class="d-flex mt-3">
-                                <button class="btn btn-primary me-2">View Details</button>
-                                <button class="btn btn-outline-primary">Apply Now</button>
+                            <div class="interview-actions mt-3">
+                                <button class="btn btn-outline-success btn-sm">
+                                    <i class="fas fa-file-alt me-2"></i>View Report
+                                </button>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="job-card">
-                        <div class="job-header">
-                            <h4>UX/UI Designer</h4>
-                            <p class="mb-0">Creative Designs Co.</p>
+                        <div class="interview-card completed">
+                            <div class="interview-status">
+                                <span class="badge bg-success">Completed</span>
+                                <span class="interview-date">Mar 28, 2025</span>
+                            </div>
+                            <h4>Backend Developer</h4>
+                            <p class="company-name">Data Systems Inc.</p>
+                            <div class="interview-details">
+                                <span><i class="fas fa-map-marker-alt me-2"></i>Remote</span>
+                                <span><i class="fas fa-clock me-2"></i>60 mins</span>
+                                <span><i class="fas fa-star me-2"></i>Score: 88%</span>
+                            </div>
+                            <div class="interview-actions mt-3">
+                                <button class="btn btn-outline-success btn-sm">
+                                    <i class="fas fa-file-alt me-2"></i>View Report
+                                </button>
+                            </div>
                         </div>
-                        <div class="job-content">
-                            <div class="row mb-3">
-                                <div class="col-md-4">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-map-marker-alt text-muted me-2"></i>
-                                        <span>Remote</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-clock text-muted me-2"></i>
-                                        <span>Full-time</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-dollar-sign text-muted me-2"></i>
-                                        <span>$90,000 - $110,000</span>
-                                    </div>
-                                </div>
+
+                        <div class="interview-card completed">
+                            <div class="interview-status">
+                                <span class="badge bg-success">Completed</span>
+                                <span class="interview-date">Mar 15, 2025</span>
                             </div>
-                            <p>
-                                Creative Designs Co. is looking for a talented UX/UI Designer to join our creative team. You'll be responsible for designing intuitive user interfaces.
-                            </p>
-                            <div class="job-tags mb-3">
-                                <span class="badge bg-light text-dark">Figma</span>
-                                <span class="badge bg-light text-dark">Adobe XD</span>
-                                <span class="badge bg-light text-dark">UI/UX</span>
+                            <h4>Full Stack Developer</h4>
+                            <p class="company-name">Tech Solutions Ltd.</p>
+                            <div class="interview-details">
+                                <span><i class="fas fa-map-marker-alt me-2"></i>Remote</span>
+                                <span><i class="fas fa-clock me-2"></i>90 mins</span>
+                                <span><i class="fas fa-star me-2"></i>Score: 95%</span>
                             </div>
-                            <div class="interview-process">
-                                <h6>Interview Process:</h6>
-                                <div class="d-flex justify-content-between">
-                                    <div class="process-step active">Application Review</div>
-                                    <div class="process-step">Portfolio Assessment</div>
-                                    <div class="process-step">AI Design Challenge</div>
-                                    <div class="process-step">Final Interview</div>
-                                </div>
+                            <div class="interview-actions mt-3">
+                                <button class="btn btn-outline-success btn-sm">
+                                    <i class="fas fa-file-alt me-2"></i>View Report
+                                </button>
                             </div>
-                            <div class="d-flex mt-3">
-                                <button class="btn btn-primary me-2">View Details</button>
-                                <button class="btn btn-outline-primary">Apply Now</button>
+                        </div>
+
+                        <div class="interview-card completed">
+                            <div class="interview-status">
+                                <span class="badge bg-success">Completed</span>
+                                <span class="interview-date">Mar 5, 2025</span>
+                            </div>
+                            <h4>DevOps Engineer</h4>
+                            <p class="company-name">Cloud Systems Inc.</p>
+                            <div class="interview-details">
+                                <span><i class="fas fa-map-marker-alt me-2"></i>Remote</span>
+                                <span><i class="fas fa-clock me-2"></i>75 mins</span>
+                                <span><i class="fas fa-star me-2"></i>Score: 85%</span>
+                            </div>
+                            <div class="interview-actions mt-3">
+                                <button class="btn btn-outline-success btn-sm">
+                                    <i class="fas fa-file-alt me-2"></i>View Report
+                                </button>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Pagination -->
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination justify-content-center mt-4">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1">Previous</a>
-                            </li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- How It Works Section -->
-<section class="how-it-works">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center mb-4">
-                <h3 class="section-title">How AI Interviews Work</h3>
-                <p class="section-subtitle">Our automated interview process makes hiring efficient and fair</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h5>Apply</h5>
-                    <p>Submit your application and resume through our platform.</p>
+    <!-- Test Modal -->
+    <div class="modal fade" id="testModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="testTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h5>AI Assessment</h5>
-                    <p>Complete technical or behavioral challenges through our AI system.</p>
+                <div class="modal-body">
+                    <div class="test-header mb-4">
+                        <p id="testDescription" class="mb-0"></p>
+                        <div id="timer" class="test-timer"></div>
+                    </div>
+                    <div id="questionContainer"></div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h5>Detailed Analysis</h5>
-                    <p>Receive feedback and analysis of your performance.</p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="submitTest()">Submit Test</button>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <h5>Next Rounds</h5>
-                    <p>Move forward to human interviews with hiring teams.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-12 text-center">
-                <button class="btn btn-outline-primary">Learn More About Our Process</button>
             </div>
         </div>
     </div>
-</section>
 
+    <!-- Result Modal -->
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Test Results</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="score-circle mb-4">
+                        <span id="finalScore">0%</span>
+                    </div>
+                    <div class="result-details mb-4">
+                        <p><strong>Total Questions:</strong> <span id="totalQuestions">0</span></p>
+                        <p><strong>Correct Answers:</strong> <span id="correctAnswers">0</span></p>
+                        <p><strong>Time Taken:</strong> <span id="timeTaken">00:00:00</span></p>
+                    </div>
+                    <p id="resultMessage" class="mb-0"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="reviewTest()">Review Answers</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
-    <footer class="mt-5">
+    <footer class="footer mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5>GenAI Interview</h5>
-                    <p>Find your dream job with AI-powered interviews.</p>
+                    <h5>InterviewAI</h5>
+                    <p>Revolutionizing tech interviews with AI.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p>&copy; 2025 GenAI Interview. All rights reserved.</p>
+                    <p>&copy; 2025 InterviewAI. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
+
 
    
     <!-- Job Filters Offcanvas Sidebar -->
@@ -550,5 +488,10 @@
   </script>
    <!-- Scripts -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/practice_test.js"></script>
 </body>
 </html>

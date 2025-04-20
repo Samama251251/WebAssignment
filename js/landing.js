@@ -223,4 +223,34 @@
     
     // Initialize on page load
     document.addEventListener('DOMContentLoaded', init);
+
+    // Scroll to Top functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const scrollToTopButton = document.querySelector('.scroll-to-top');
+        const scrollThreshold = 300; // Show button after scrolling 300px
+
+        // Function to handle scroll event
+        function handleScroll() {
+            if (window.scrollY > scrollThreshold) {
+                scrollToTopButton.classList.add('visible');
+            } else {
+                scrollToTopButton.classList.remove('visible');
+            }
+        }
+
+        // Function to scroll to top
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Add event listeners
+        window.addEventListener('scroll', handleScroll);
+        scrollToTopButton.addEventListener('click', scrollToTop);
+
+        // Initial check for scroll position
+        handleScroll();
+    });
 })(); 
