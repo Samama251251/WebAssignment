@@ -446,3 +446,80 @@ body {
 [data-theme="dark"] .option-item:hover {
     background-color: var(--bg-secondary);
 }
+
+/* Profile and Report Modal Styles */
+.score-badge {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    display: inline-block;
+}
+
+.report-section {
+    margin-bottom: 2rem;
+}
+
+.report-section h5 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Dark Mode Styles for Modals */
+[data-theme="dark"] .modal-content {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .score-card,
+[data-theme="dark"] .list-group-item {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .table {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .bg-light {
+    background-color: var(--bg-primary) !important;
+}
+
+/* Interview Details Modal Styles */
+.interview-header h4 {
+    color: var(--dark-color);
+    font-weight: bold;
+}
+
+.interview-section h5 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.interview-section .card {
+    border-radius: var(--border-radius);
+    border-color: var(--border-color);
+    box-shadow: var(--box-shadow);
+}
+
+/* Dark Mode Styles for Interview Details */
+[data-theme="dark"] .interview-header h4 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .text-muted {
+    color: var(--text-secondary) !important;
+}
