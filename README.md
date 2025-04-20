@@ -27,7 +27,7 @@ Bootstrap Icons: Icon library
 Font Awesome: Additional icons
 
 Project Structure
-├── LandingPage.html                # Main landing page
+├── index.html                # Main landing page
 ├── html/
 │   ├── auth.html                  # Login and signup page
 │   ├── client_posting.html        # Candidate dashboard
@@ -89,4 +89,4 @@ Clone the repository:
 git clone https://github.com/Samama251251/WebAssignment.git
 
 Open the project in your code editor
-Open LandingPage.html in your browser to view the project locally
+Open index.html in your browser to view the project locally
