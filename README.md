@@ -90,4 +90,3 @@ git clone https://github.com/Samama251251/WebAssignment.git
 
 Open the project in your code editor
 Open LandingPage.html in your browser to view the project locally
-
